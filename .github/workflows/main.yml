@@ -43,5 +43,5 @@ jobs:
       with:
         destination_branch: "main"
         pr_title: "Pulling ${{ github.ref }} into master"
-        pr_body: "Hola mundo"
+        pr_body: "${{ needs.scan_files.outputs.file_added }}"
         github_token: ${{ secrets.GITHUB_TOKEN }}
